@@ -1,0 +1,370 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2b7cff;
+  padding: 15px 30px;
+  color: white;
+}
+
+.logo {
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  background-size: cover;
+  background-position: center;
+  height: 60vh; /* shrink height on mobile */
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 50vh;
+  }
+}
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url("https://images.unsplash.com/photo-1581578731548-c64695cc6952");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 25px;
+  background: white;
+  color: #2b7cff;
+  font-weight: bold;
+  cursor: pointer;
+}/* SERVICES SECTION */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f5f7fb;
+}
+
+.services h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: white;
+  padding: 25px;
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+/* CONTACT SECTION */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  width: 300px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact button {
+  padding: 12px 25px;
+  background: #2b7cff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact button:hover {
+  background: #1a5ec1;
+}.contact select {
+  width: 320px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}/* CONTACT SECTION */
+/* ===== CONTACT SECTION ===== */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Input, textarea, and select styles */
+.contact input,
+.contact textarea,
+.contact select {
+  width: 320px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: white;
+  box-sizing: border-box;
+}
+
+/* Textarea height */
+.contact textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Dropdown arrow */
+.contact select {
+  appearance: none;
+  background: white url('data:image/svg+xml;utf8,<svg fill="gray" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+/* Submit button */
+.contact button {
+  padding: 12px 25px;
+  background: #2b7cff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact button:hover {
+  background: #1a5ec1;
+}/* TESTIMONIALS */
+.testimonials {
+  padding: 60px 20px;
+  background: #f5f7fb;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.testimonial-card {
+  max-width: 400px;
+  margin: auto;
+  font-style: italic;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets and small desktops */
+@media (max-width: 992px) {
+  .service-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .service-card {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .contact input,
+  .contact textarea,
+  .contact select {
+    width: 90%;
+  }
+
+  .testimonial-card {
+    max-width: 90%;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .hero button {
+    padding: 10px 20px;
+  }
+
+  .service-card {
+    width: 90%;
+  }
+
+  .contact input,
+  .contact textarea,
+  .contact select {
+    width: 95%;
+  }
+
+  .testimonial-card {
+    max-width: 95%;
+  }
+}
+/* Hero button hover */
+.hero button:hover {
+  background: #1a5ec1;
+  transform: scale(1.05);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Service cards hover (already added, but optional update) */
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* Contact button hover */
+.contact button:hover {
+  transform: scale(1.05);
+}
+
+/* Testimonial hover */
+.testimonial-card:hover {
+  transform: translateY(-5px) scale(1.01);
+}
+/* Hero button hover */
+.hero button:hover {
+  background: #1a5ec1;
+  transform: scale(1.05);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Service cards hover (already added, but optional update) */
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* Contact button hover */
+.contact button:hover {
+  transform: scale(1.05);
+}
+
+/* Testimonial hover */
+.testimonial-card:hover {
+  transform: translateY(-5px) scale(1.01);
+}
+/* Reduce hero height for small screens */
+@media(max-width:600px){
+  .hero {
+    height: 50vh;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+}
