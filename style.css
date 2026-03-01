@@ -1,9 +1,13 @@
+/* =================== GLOBAL STYLES =================== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  font-size: 16px; /* base font size for scaling */
+  line-height: 1.5;
+  box-sizing: border-box;
 }
 
-/* NAVBAR */
+/* =================== NAVBAR =================== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -11,6 +15,7 @@ body {
   background: #2b7cff;
   padding: 15px 30px;
   color: white;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -21,6 +26,7 @@ body {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -29,18 +35,7 @@ body {
   font-weight: bold;
 }
 
-/* HERO */
-.hero {
-  background-size: cover;
-  background-position: center;
-  height: 60vh; /* shrink height on mobile */
-}
-
-@media (max-width: 600px) {
-  .hero {
-    height: 50vh;
-  }
-}
+/* =================== HERO =================== */
 .hero {
   height: 80vh;
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
@@ -56,8 +51,12 @@ body {
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 3rem; /* 48px */
   margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.125rem; /* 18px */
 }
 
 .hero button {
@@ -69,7 +68,15 @@ body {
   color: #2b7cff;
   font-weight: bold;
   cursor: pointer;
-}/* SERVICES SECTION */
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero button:hover {
+  background: #1a5ec1;
+  transform: scale(1.05);
+}
+
+/* =================== SERVICES =================== */
 .services {
   padding: 60px 20px;
   text-align: center;
@@ -77,7 +84,7 @@ body {
 }
 
 .services h2 {
-  font-size: 32px;
+  font-size: 2rem; /* 32px */
   margin-bottom: 40px;
 }
 
@@ -98,9 +105,10 @@ body {
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) scale(1.02);
 }
-/* CONTACT SECTION */
+
+/* =================== CONTACT =================== */
 .contact {
   padding: 60px 20px;
   text-align: center;
@@ -108,13 +116,13 @@ body {
 }
 
 .contact h2 {
-  font-size: 32px;
+  font-size: 2rem; /* 32px */
   margin-bottom: 15px;
 }
 
 .contact p {
   margin-bottom: 30px;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
 }
 
 .contact form {
@@ -124,86 +132,26 @@ body {
   gap: 15px;
 }
 
-.contact input,
-.contact textarea {
-  width: 300px;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-.contact textarea {
-  height: 120px;
-  resize: none;
-}
-
-.contact button {
-  padding: 12px 25px;
-  background: #2b7cff;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact button:hover {
-  background: #1a5ec1;
-}.contact select {
-  width: 320px;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}/* CONTACT SECTION */
-/* ===== CONTACT SECTION ===== */
-.contact {
-  padding: 60px 20px;
-  text-align: center;
-  background: #ffffff;
-}
-
-.contact h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.contact p {
-  margin-bottom: 30px;
-  font-size: 18px;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-/* Input, textarea, and select styles */
 .contact input,
 .contact textarea,
 .contact select {
   width: 320px;
+  max-width: 95%;
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Arial, sans-serif;
   color: #333;
   background: white;
   box-sizing: border-box;
 }
 
-/* Textarea height */
 .contact textarea {
   height: 120px;
   resize: none;
 }
 
-/* Dropdown arrow */
 .contact select {
   appearance: none;
   background: white url('data:image/svg+xml;utf8,<svg fill="gray" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
@@ -211,7 +159,6 @@ body {
   cursor: pointer;
 }
 
-/* Submit button */
 .contact button {
   padding: 12px 25px;
   background: #2b7cff;
@@ -220,12 +167,15 @@ body {
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .contact button:hover {
   background: #1a5ec1;
-}/* TESTIMONIALS */
+  transform: scale(1.05);
+}
+
+/* =================== TESTIMONIALS =================== */
 .testimonials {
   padding: 60px 20px;
   background: #f5f7fb;
@@ -233,7 +183,7 @@ body {
 }
 
 .testimonials h2 {
-  font-size: 32px;
+  font-size: 2rem; /* 32px */
   margin-bottom: 40px;
 }
 
@@ -249,17 +199,12 @@ body {
 }
 
 .testimonial-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.01);
 }
-/* ===== RESPONSIVE DESIGN ===== */
 
+/* =================== RESPONSIVE DESIGN =================== */
 /* Tablets and small desktops */
 @media (max-width: 992px) {
-  .service-cards {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .service-card {
     width: 45%;
     margin-bottom: 20px;
@@ -288,12 +233,16 @@ body {
     gap: 10px;
   }
 
+  .hero {
+    height: 50vh;
+  }
+
   .hero h1 {
-    font-size: 32px;
+    font-size: 2rem; /* 32px */
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 1rem; /* 16px */
   }
 
   .hero button {
@@ -312,59 +261,5 @@ body {
 
   .testimonial-card {
     max-width: 95%;
-  }
-}
-/* Hero button hover */
-.hero button:hover {
-  background: #1a5ec1;
-  transform: scale(1.05);
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-/* Service cards hover (already added, but optional update) */
-.service-card:hover {
-  transform: translateY(-10px) scale(1.02);
-}
-
-/* Contact button hover */
-.contact button:hover {
-  transform: scale(1.05);
-}
-
-/* Testimonial hover */
-.testimonial-card:hover {
-  transform: translateY(-5px) scale(1.01);
-}
-/* Hero button hover */
-.hero button:hover {
-  background: #1a5ec1;
-  transform: scale(1.05);
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-/* Service cards hover (already added, but optional update) */
-.service-card:hover {
-  transform: translateY(-10px) scale(1.02);
-}
-
-/* Contact button hover */
-.contact button:hover {
-  transform: scale(1.05);
-}
-
-/* Testimonial hover */
-.testimonial-card:hover {
-  transform: translateY(-5px) scale(1.01);
-}
-/* Reduce hero height for small screens */
-@media(max-width:600px){
-  .hero {
-    height: 50vh;
-  }
-  .hero h1 {
-    font-size: 32px;
-  }
-  .hero p {
-    font-size: 4rem;
   }
 }
